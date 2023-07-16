@@ -1,0 +1,892 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 70vh;
+  background-image: url("img/bp-hd11.png");
+  background-position: center;
+  background-size: cover;
+  /* position: relative; */
+}
+
+@media (max-width: 576px) {
+  .header {
+    width: 100%;
+    height: 70vh;
+    background-image: url("img/bp-hd.png");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* top-nav */
+
+.top-nav {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: fixed;
+  top: 0; */
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.top-nav .top-nav-item {
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* .top-nav .offer-button a{
+  padding: 5px 10px;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: 0.6s;
+  margin: 0 auto;
+  font-size: 14px;
+
+} */
+
+.top-nav .offer-button a:hover {
+  color: #fff;
+  background-color: green;
+}
+
+.top-nav i {
+  color: red;
+  margin: 0 6px;
+}
+
+.top-nav p {
+  color: white;
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .top-nav {
+    display: none;
+  }
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  /* z-index: 1; */
+}
+
+.navbar a img {
+  margin-left: 60px;
+  margin-top: 5px;
+  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+.navbar .btn {
+  margin-right: 60px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  margin: 0 15px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  height: 4px;
+  width: 0;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.6s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 0 5px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 8px 30px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn a:hover {
+  color: black;
+  background-color: cyan;
+  border: 1px solid cyan;
+}
+
+.navbar #fa {
+  display: none;
+}
+
+.menu-btn {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.cancel-btn {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  position: absolute;
+  right: 50px;
+  top: 40px;
+}
+
+.icon {
+  display: none;
+}
+.btn-inner {
+  display: none;
+}
+
+.head-inner-btn {
+  display: inline;
+  margin: 200px 20px;
+  float: right;
+  transition: 0.5s;
+}
+
+.head-inner-btn a {
+  text-decoration: none;
+}
+
+.black {
+  background-color: black;
+  padding: 8px 16px;
+  border: 1px solid black;
+  margin-right: 150px;
+}
+
+.black:hover {
+  background-color: #5a5858;
+}
+
+.black a {
+  color: white;
+}
+
+.white {
+  border: 1px solid black;
+  padding: 8px 16px;
+}
+
+.white:hover {
+  background-color: rgb(223, 223, 223);
+}
+
+.white a {
+  color: black;
+}
+
+@media (max-width: 966px) {
+  .header {
+    height: 60vh;
+  }
+  .icon {
+    display: block;
+    z-index: 2;
+  }
+
+  .icon.hide {
+    display: none;
+  }
+  .navbar .nav-links ul.active {
+    left: 0%;
+  }
+
+  .navbar a img {
+    width: 50px;
+    height: auto;
+    margin-left: 30px;
+  }
+
+  .nav-links ul {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    background: #222;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    transition: all 0.7s ease;
+  }
+
+  .nav-links ul li {
+    display: block;
+    padding-top: 75px;
+  }
+
+  .nav-links ul li a {
+    color: white;
+    transition: 0.5s;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .nav-links ul li a:hover {
+    padding: 6px 12px;
+    background-color: cyan;
+    color: black;
+    border-radius: 5px;
+  }
+
+  .nav-links ul li:hover::after {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+  .btn-inner {
+    display: block;
+  }
+
+  .nav-links ul li .btn-inner a {
+    color: black;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px 30px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .nav-links ul li .btn-inner a:hover {
+    background-color: cyan;
+  }
+}
+
+/* anasayfa */
+
+.head-inner-btns {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.head-inner-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 20px;
+  border: 1px solid black;
+  transition: 0.5s;
+}
+
+.head-inner-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.head-inner-btns .black {
+  background-color: black;
+}
+.head-inner-btns .black:hover {
+  background-color: rgb(121, 118, 118);
+  color: white;
+}
+
+.head-inner-btns .black a {
+  color: white;
+}
+
+.head-inner-btns .white:hover {
+  background-color: rgb(196, 196, 196);
+}
+
+@media (max-width: 567px) {
+  .head-inner-btns {
+    display: none;
+  }
+}
+
+/* slider */
+
+.slider {
+  background-color: #ccd4df;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .imgSlider {
+  height: 500px;
+  width: 700px;
+  background-image: url(img/brkfrklft.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: changeImage 7s linear infinite;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.slider .desc {
+  font-size: 40px;
+  margin: 30px;
+  align-items: center;
+}
+
+.slider .desc span {
+  color: #ce7917;
+  font-size: 48px;
+  margin-left: 70px;
+}
+
+@media (max-width: 567px) {
+  .slider {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .slider .imgSlider {
+    height: 50%;
+    width: 300px;
+    background-image: url(img/brkfrklft.jpg);
+    background-size: 100% 100%;
+    border-radius: 10px;
+    margin: 30px;
+  }
+}
+
+@keyframes changeImage {
+  0% {
+    background-image: url(img/brkfrklft.jpg);
+  }
+  50% {
+    background-image: url(img/palet.jpg);
+  }
+  100% {
+    background-image: url(img/brktır.JPG);
+  }
+}
+
+/* hizmetlerimiz */
+
+.row {
+  width: 900px;
+  height: auto;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.row img {
+  background-size: cover;
+  border-radius: 10px;
+  width: 390px;
+  height: 270px;
+  transition: 0.5s;
+}
+
+.row .desc {
+  width: 390px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row .desc h3 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.hizmetlerimiz {
+  height: auto;
+  width: 100%;
+  background: #f2f2f2;
+  padding-bottom: 30px;
+}
+
+.hizmetlerimiz .title h1 {
+  text-align: center;
+  padding-top: 70px;
+  font-size: 36px;
+  text-shadow: 1px 1px 5px #888888;
+  border-top: 1px solid #888888;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 966px) {
+  .hizmetlerimiz .row {
+    height: 100%;
+    width: 700px;
+  }
+
+  .hizmetlerimiz .row img {
+    width: 290px;
+    height: 200px;
+  }
+
+  .hizmetlerimiz .row .desc {
+    width: 290px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hizmetlerimiz .row .desc h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .hizmetlerimiz .row .desc p {
+    font-size: 14px;
+  }
+
+  .hizmetlerimiz h1 {
+    font-size: 26px;
+    margin: 20px 0;
+  }
+
+  .hizmetlerimiz .row .card {
+    margin-top: 50px;
+    border-radius: 10px;
+  }
+
+  .hizmetlerimiz .row .card h3 {
+    font-size: 24px;
+  }
+
+  .hizmetlerimiz .row .card p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hizmetlerimiz .title h1 {
+    font-size: 28px;
+  }
+  .hizmetlerimiz .row {
+    height: 100%;
+    width: 100%;
+    display: block;
+    align-items: center;
+  }
+
+  .hizmetlerimiz .row img {
+    width: 100%;
+    height: 230px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .hizmetlerimiz .row .desc h3 {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  .hizmetlerimiz .right .desc {
+    margin-bottom: 10px;
+  }
+}
+
+/* is-ort */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.is-ort {
+  background: #0b69ed;
+  height: 500px;
+  width: 100%;
+}
+.slider-area h2 {
+  padding: 40px;
+  text-align: center;
+  font-family: impact;
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 100px 0 30px 0;
+  color: #fff;
+}
+.wrapper {
+  display: flex;
+  width: 750px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 180px;
+  padding: 2.5rem;
+  background: #ddd;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.wrapper img {
+  width: 140px;
+  height: 70px;
+  margin: 0 20px;
+}
+.item {
+  animation: animate 25s alternate linear infinite;
+}
+.container:hover .item {
+  animation-play-state: paused;
+}
+@keyframes animate {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1100px, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .slider-area h2 {
+    font-size: 30px;
+  }
+  .wrapper {
+    width: 95%;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-area h2 {
+    font-size: 30px;
+  }
+  .wrapper {
+    width: 95%;
+    border-radius: 0;
+    padding: 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+  }
+
+  .is-ort {
+    background: #0b69ed;
+    height: 400px;
+    width: 100%;
+  }
+}
+
+/* hakkımda */
+
+.hakkımda {
+  margin-top: 120px;
+}
+
+.hakkımda .row {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hakkımda .row img {
+  width: 400px;
+  height: 450px;
+  box-shadow: 5px 5px 15px #888888;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.hakkımda .row .img-col {
+  margin: 40px;
+}
+
+.hakkımda .row .p-col {
+  width: 400px;
+  height: 450px;
+  margin: 40px;
+  border-bottom: 1px solid #888888;
+  text-align: center;
+}
+
+.hakkımda .row .p-col h2 {
+  font-size: 34px;
+}
+
+.hakkımda .row .p-col p {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+}
+
+.hakkımda .responsive-title {
+  display: none;
+}
+
+@media (max-width: 567px) {
+  .hakkımda .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hakkımda .row .p-col {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hakkımda .row h2 {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+  }
+
+  .hakkımda .row .img-col {
+    width: 100%;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hakkımda .row .img-col img {
+    margin: 0;
+    padding: 0;
+    height: 320px;
+  }
+}
+
+@media (max-width: 966px) {
+  .hakkımda {
+    margin-top: 0;
+  }
+  .hakkımda .row {
+    flex-direction: column;
+  }
+  .hakkımda .row img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hakkımda .row h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .hakkımda .row .p-col p {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .hakkımda .responsive-title {
+    display: block;
+    margin: 30px;
+  }
+
+  .hakkımda .title {
+    display: none;
+  }
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer h3 {
+  font-size: 14px;
+  color: #a70909;
+  text-align: center;
+}
+.footer h4 {
+  margin: 20px 0;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.footer a {
+  font-family: "Cinzel", serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .footer h3 {
+    font-size: 14px;
+    color: #ce1717;
+    text-align: center;
+  }
+
+  .footer a {
+    font-size: 14px;
+  }
+}
+
+/* iletişim */
+
+.top-img {
+  /* background-color: #84b3f4; */
+  width: 100%;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #0b51b3;
+}
+
+.top-img img {
+  width: 600px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+}
+
+.contact {
+  /* background-color: #287cf1; */
+  width: 900px;
+  height: 150px;
+  margin: 90px auto;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.contact .cont-col {
+  background-color: #0b51b3;
+  color: white;
+  margin: 0 20px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.contact .cont-col:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #0b51b3;
+  scale: 1.1;
+}
+
+.contact .cont-col i {
+  margin: 10px 0;
+  font-size: 28px;
+}
+.contact .cont-col p {
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+@media (max-width: 567px) {
+  .top-img {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+  }
+  .top-img img {
+    width: 400px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact {
+    /* background-color: #287cf1; */
+    width: 280px;
+    height: 360px;
+    margin: 20px auto;
+    display: block;
+    padding: 10px;
+  }
+
+  .contact .cont-col {
+    width: 250px;
+
+    color: white;
+    margin: 10px auto;
+    border: 1px solid white;
+    padding: 10px;
+  }
+
+  .contact .cont-col i {
+    margin: 16px 0;
+    font-size: 24px;
+  }
+
+  .contact .cont-col p {
+    margin: 0;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim</title>
+
+    <style></style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html"><img src="img/LOGOba.png" alt="" /></a>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <div class="icon cancel-btn">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+          </div>
+          <li><a href="index.html">ANASAYFA</a></li>
+          <li><a href="index.html#hizmetlerimiz">HİZMETLERİMİZ</a></li>
+          <li><a href="index.html#is-ort">İŞ ORTAKLARIMIZ</a></li>
+          <li><a href="index.html#hakkımda">HAKKIMDA</a></li>
+          <li>
+            <div class="btn-inner"><a href="#iletisim">İLETİŞİM</a></div>
+          </li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fa-solid fa-bars fa-lg"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="top-img">
+      <img src="img/iletisim.jpg" alt="" />
+    </div>
+
+    <div class="contact">
+      <div class="cont-col col-1">
+        <i class="fa-solid fa-phone"></i>
+        <p>0535-935-41-29</p>
+      </div>
+      <div class="cont-col col-2">
+        <i class="fa-solid fa-envelope"></i>
+        <p>iletisim@burakpalet.com</p>
+      </div>
+      <div class="cont-col col-3">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Kocaeli/Darıca</p>
+      </div>
+    </div>
+
+    <script>
+      const menu = document.querySelector(".nav-links ul");
+
+      const menuBtn = document.querySelector(".menu-btn");
+
+      const cancelBtn = document.querySelector(".cancel-btn");
+
+      menuBtn.onclick = () => {
+        menu.classList.add("active");
+        menuBtn.classList.add("hide");
+      };
+
+      cancelBtn.onclick = () => {
+        menu.classList.remove("active");
+        menuBtn.classList.remove("hide");
+      };
+    </script>
+  </body>
+</html>
